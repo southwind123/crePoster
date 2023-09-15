@@ -1,10 +1,10 @@
 <template>
-	<view v-if="showPopup||onceRender" v-show="showPopup"  class="uni-popup" :class="[popupstyle, isDesktop ? 'fixforpc-z-index' : '']">
+	<view v-if="showPopup" class="uni-popup" :class="[popupstyle, isDesktop ? 'fixforpc-z-index' : '']">
 		<view @touchstart="touchstart">
 			<uni-transition key="1" v-if="maskShow" name="mask" mode-class="fade" :styles="maskClass"
 				:duration="duration" :show="showTrans" @click="onTap" />
 			<uni-transition key="2" :mode-class="ani" name="content" :styles="transClass" :duration="duration"
-				:show="showTrans" @click="onTap" :once-render="onceRender">
+				:show="showTrans" @click="onTap">
 				<view class="uni-popup__wrapper" :style="{ backgroundColor: bg }" :class="[popupstyle]" @click="clear">
 					<slot />
 				</view>
@@ -85,11 +85,6 @@
 			maskBackgroundColor: {
 				type: String,
 				default: 'rgba(0, 0, 0, 0.4)'
-			},
-			// 指定使用v-show指令，不重新渲染Pop组件
-			onceRender:{
-				type:Boolean,
-				default:false
 			},
 		},
 
@@ -352,7 +347,7 @@
 					left: 0,
 					right: 0,
 					bottom: 0,
-					paddingBottom: this.safeAreaInsets + 'px',
+					// paddingBottom: this.safeAreaInsets + 'px',
 					backgroundColor: this.bg
 				}
 				// TODO 兼容 type 属性 ，后续会废弃

@@ -4,7 +4,8 @@
 		<view class="uni-share-content">
 			<view class="uni-share-content-box">
 				<view class="uni-share-content-item" v-for="(item,index) in bottomData" :key="index" @click.stop="select(item,index)">
-					<image class="uni-share-image" :src="item.icon" mode="aspectFill"></image>
+					<!-- <image class="uni-share-image" :src="item.icon" mode="aspectFill"></image> -->
+          <uni-icons :type="item.icon" size="30"></uni-icons>
 					<text class="uni-share-text">{{item.text}}</text>
 				</view>
 
@@ -40,23 +41,23 @@
 		data() {
 			return {
 				bottomData: [{
-						text: '微信',
-						icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/c2b17470-50be-11eb-b680-7980c8a877b8.png',
+						text: '微信好友',
+						icon: 'weixin',
 						name: 'wx'
 					},
 					{
-						text: '支付宝',
-						icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/d684ae40-50be-11eb-8ff1-d5dcf8779628.png',
+						text: '朋友圈',
+						icon: 'pyq',
 						name: 'wx'
 					},
 					{
 						text: 'QQ',
-						icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/e7a79520-50be-11eb-b997-9918a5dda011.png',
+						icon: 'qq',
 						name: 'qq'
 					},
 					{
 						text: '新浪',
-						icon: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/0dacdbe0-50bf-11eb-8ff1-d5dcf8779628.png',
+						icon: 'weibo',
 						name: 'sina'
 					},
 					// {

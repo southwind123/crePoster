@@ -1,9 +1,9 @@
 {
 	"pages": [{
-            "path" : "pages/home/home",
+            "path" : "pages/main/main",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "海报生成",
+                "navigationBarTitleText": "Cre-poster",
                 "enablePullDownRefresh": false
             }
             
@@ -12,16 +12,40 @@
             "path" : "pages/poster/poster",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "海标生成",
+                "navigationBarTitleText": "Cre-poster",
+                "enablePullDownRefresh": false
+                // "navigationStyle":"custom"
+            },
+            "app-plus": 
+            {
+            		"titleView":false//只看这两条,其他不用看
+            }
+            
+        }
+        ,{
+            "path" : "pages/library/library",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Cre-poster",
+                // "navigationStyle":"custom",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/my/my",
+            "path" : "pages/main-poster/main-poster",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "海报生成",
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/library/library-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -32,28 +56,30 @@
         "selectedColor": "#f57969",
         "list": [
           {
-            "pagePath": "pages/home/home",
-            "text": "首页",
-            "iconPath": "static/tab_icons/home.png",
-            "selectedIconPath": "static/tab_icons/home-active.png"
+            "pagePath": "pages/main/main",
+            "text": "Main",
+            "iconPath": "static/tab_icons/main.png",
+            "selectedIconPath": "static/tab_icons/main-active.png"
+          },
+          {
+            "pagePath": "pages/library/library",
+            "text": "Library",
+            "iconPath": "static/tab_icons/library.png",
+            "selectedIconPath": "static/tab_icons/library-active.png"
           },
           {
             "pagePath": "pages/poster/poster",
-            "text": "海报生成",
+            "text": "My poster",
             "iconPath": "static/tab_icons/poster.png",
             "selectedIconPath": "static/tab_icons/poster-active.png"
-          },
-          {
-            "pagePath": "pages/my/my",
-            "text": "我的",
-            "iconPath": "static/tab_icons/my.png",
-            "selectedIconPath": "static/tab_icons/my-active.png"
           }
+          
         ]
       },
 	"globalStyle": {
+    
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "海报生成",
+		"navigationBarTitleText": "Cre-poster",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#f7f8f3",
 		"app-plus": {
